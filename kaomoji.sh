@@ -10,7 +10,7 @@ show_help() {
     echo "Options:"
     echo "  -h, --help              Display this message"
     echo "  -r                      Output with a random terminal color"
-    echo "  -p=PATH, --path=PATH    Change the emoji file"
+    echo "  -p=PATH, --path=PATH    Path to the kaomoji file"
     exit 1
 }
 
