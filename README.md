@@ -21,11 +21,9 @@ i made this in order to have a fabulous bash prompt as shown on the screenshot
 
 if you're curious, here is the mess i added to my `.bashrc`:
 ```sh
-#call kaomoji script
 KAOMOJI_SCRIPT_PATH="bash $HOME/.dotfiles/kaomoji.sh -r -p=$HOME/.dotfiles/kaomoji.txt"
 FOLDER_BG=105
 FOLDER_PRE_BG=$(($FOLDER_BG - 10))
 
-#PS1='[ \[$($KAOMOJI_SCRIPT_PATH)\] • \[\e[93m\] /\W\[\e[0m\] ] \[\e[95m\]>\[\e[0m\] '
 PS1='• \[$($KAOMOJI_SCRIPT_PATH)\] ✿  \[\e[${FOLDER_PRE_BG}m\]\[\e[${FOLDER_BG}m\] \[\e[93m\] /\W \[\e[0m\]\[\e[${FOLDER_PRE_BG}m\]     \[\e[91m\]>\[\e[0m\] '
 ```
