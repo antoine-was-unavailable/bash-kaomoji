@@ -10,7 +10,7 @@ show_help() {
     echo "Options:"
     echo "  -h, --help              Display this message"
     echo "  -r                      Output with a random terminal color"
-    echo "  -p=PATH, --path=PATH    Path to the kaomoji file"
+    echo "  -p=PATH, --path=PATH    Change the emoji file"
     exit 1
 }
 
@@ -37,4 +37,4 @@ n=$((1 + $RANDOM % $LINE_NUMBER)) # choose random line
 
 kaomoji=$(cat $KAO_PATH | head -$n | tail -1) # select n kaomoji
 
-echo -e $PRINT_COLOR$kaomoji"\e[m" # echo result
+echo -e $PRINT_COLOR$kaomoji # echo result
