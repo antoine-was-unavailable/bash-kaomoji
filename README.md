@@ -13,17 +13,16 @@ add `-r` for a random color or `-p=/PATH/TO/ANOTHER/FILE.TXT` to use another sou
 ## options
     -h, --help              Display this message
     -r                      Output with a random terminal color
-    -p=PATH, --path=PATH    Path to the emoji file
+    -p=PATH, --path=PATH    Change the emoji file
 
 ## what for
 
 i made this in order to have a fabulous bash prompt as shown on the screenshot
 
-if you're curious, here is the mess i added to my `.bashrc`:
+in case you're curious, here is the chonker i use to make it my bash prompt `.bashrc`:
 ```sh
-KAOMOJI_SCRIPT_PATH="bash $HOME/.dotfiles/kaomoji.sh -r -p=$HOME/.dotfiles/kaomoji.txt"
 FOLDER_BG=105
 FOLDER_PRE_BG=$(($FOLDER_BG - 10))
 
-PS1='• \[$($KAOMOJI_SCRIPT_PATH)\] ✿  \[\e[${FOLDER_PRE_BG}m\]\[\e[${FOLDER_BG}m\] \[\e[93m\] /\W \[\e[0m\]\[\e[${FOLDER_PRE_BG}m\]     \[\e[91m\]>\[\e[0m\] '
+PS1='• \[\e[$((31 + $RANDOM % 7 + ( $RANDOM % 2 * 60 )))m\] $(bash $HOME/.dotfiles/kaomoji.sh -p=$HOME/.dotfiles/kaomoji.txt) \[\e[0m\] ✿  \[\e[${FOLDER_PRE_BG}m\]\[\e[${FOLDER_BG}m\] \[\e[93m\] /\W \[\e[0m\]\[\e[${FOLDER_PRE_BG}m\] \[\e[91m\]>\[\e[0m\] '
 ```
